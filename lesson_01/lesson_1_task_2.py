@@ -1,5 +1,3 @@
-
-my_age = [ 30,
-33             # мой возраст через три года.
-]
+my_age = 30
+my_age = my_age + 3  
 print(my_age)
