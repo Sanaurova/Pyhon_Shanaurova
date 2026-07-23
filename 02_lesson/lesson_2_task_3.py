@@ -1,15 +1,13 @@
 import math
 
-def square(side):
-    #Вычисляет площадь квадрата.
-    #Если сторона не является целым числом, площадь округляется вверх.
-    area = side * side
 
-    if side != int(side):
-        area = math.ceil(area)
-    return area
+def square(side):
+    # Вычисляет площадь квадрата и округляет вверх, если она не целая.
+    area = side * side
+    return math.ceil(area)
 
 # Пример вызова функции с разными сторонами
+
 
 side1 = 6
 side2 = 2.0
