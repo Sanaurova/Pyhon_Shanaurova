@@ -78,30 +78,40 @@ def test_delete_symbol_positive(string, symbol, expected):
 def test_delete_symbol_negative(string, symbol, expected):
     assert string_utils.delete_symbol(string, symbol) == expected
 
+
 def test_capitalize_none():
     with pytest.raises(AttributeError):
         string_utils.capitalize(None)
+
 
 def test_trim_none():
     with pytest.raises(AttributeError):
         string_utils.trim(None)
 
+
 def test_contains_none():
     with pytest.raises(AttributeError):
         string_utils.contains(None, "a")
+
 
 def test_delete_symbol_none():
     with pytest.raises(AttributeError):
         string_utils.delete_symbol(None, "a")
 
-def test_trim_with_tab():    
-    assert string_utils.trim("\tskypro") == "skypro"  # Ожидаем "skypro", но получим "\tskypro"
+
+def test_trim_with_tab():
+    # Ожидаем "skypro", но получим "\tskypro"
+    assert string_utils.trim("\tskypro") == "skypro"
+
 
 def test_delete_symbol_empty_symbol():
-    assert string_utils.delete_symbol("abc", "") == "abc"  # Ожидаем "abc", но получим ""
+    assert string_utils.delete_symbol(
+        "abc", "") == "abc"  # Ожидаем "abc", но получим ""
+
 
 def test_contains_empty_string():
-    assert string_utils.contains("abc", "") == True
+    assert string_utils.contains("abc", "")
+
 
 def test_capitalize_single_char():
     assert string_utils.capitalize("a") == "A"
